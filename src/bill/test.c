@@ -1,5 +1,5 @@
 #include "bill.h"
-#include <mcheck.h>   // I had memory corruption issues, hence this check
+#include <mcheck.h> // I had memory corruption issues, hence this check
 
 int main(int argc, char const *argv[]) {
 
@@ -21,7 +21,7 @@ int main(int argc, char const *argv[]) {
   printf("Bill date: %s", ctime(&(buffer->date)));
   printf("Bill amount: %f\n", buffer->amount);
   printf("Bill len: %d\n", buffer->len);
-  printf("Bill reason: %s\n", (char *) &(buffer->reason));
+  printf("Bill reason: %s\n", (char *)&(buffer->reason));
 
   mcheck_check_all();
 
